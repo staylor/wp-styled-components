@@ -1,7 +1,7 @@
 import { css } from 'emotion';
 import styled from 'emotion/react';
 import { withTheme } from 'theming';
-import theme from './styles/theme';
+import theme from './theme';
 
 export const ContentWrapper = styled.div`max-width: 740px;`;
 export const ArticleWrapper = styled.article`max-width: 740px;`;
