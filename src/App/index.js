@@ -39,3 +39,15 @@ export const Secondary = styled.section`
     flex: 1;
   }
 `;
+
+const StyledFooter = withTheme(styled.footer`
+  padding: ${p => p.theme.padding}px 0;
+  text-align: center;
+`);
+
+export const Footer = () =>
+  <StyledFooter>
+    © Scott Taylor ...&nbsp; Brooklyn, NY ...{' '}
+    <a href="https://twitter.com/wonderboymusic">@wonderboymusic</a>&nbsp; ... Powered by GraphQL /
+    React / GraphQL / WordPress / Emotion
+  </StyledFooter>;
