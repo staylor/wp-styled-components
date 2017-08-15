@@ -1,7 +1,5 @@
-import React from 'react';
 import styled from 'emotion/react';
 import { ThemeProvider, withTheme } from 'theming';
-import theme from '../theme';
 import responsive from '../responsive';
 
 export { ThemeProvider };
