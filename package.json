@@ -32,6 +32,6 @@
     "clean": "rimraf lib",
     "build": "npm run clean && babel --ignore __tests__,__mocks__ src -d lib",
     "prettier": "prettier-eslint \"src/**/*.js\"",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   }
 }
