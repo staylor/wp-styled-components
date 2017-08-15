@@ -4,6 +4,10 @@ import styled from 'emotion/react';
 import { ThemeProvider as ThemingProvider, withTheme } from 'theming';
 import theme from '../theme';
 import responsive from '../responsive';
+import Header from '../Header';
+import Sidebar from '../Sidebar';
+
+export { Header, Sidebar };
 
 export const ThemeProvider = ({ children }) =>
   <ThemingProvider theme={theme}>

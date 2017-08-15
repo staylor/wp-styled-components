@@ -4,10 +4,8 @@ import { withTheme } from 'theming';
 import theme from './theme';
 import Error from './Error';
 import Loading from './Loading';
-import Header from './Header';
-import Sidebar from './Sidebar';
 
-export { hydrate, Error, Loading, Header, Sidebar };
+export { hydrate, Error, Loading };
 
 export const ContentWrapper = styled.div`max-width: 740px;`;
 export const ArticleWrapper = styled.article`max-width: 740px;`;
