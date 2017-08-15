@@ -38,6 +38,20 @@ export const Label = withTheme(styled.label`
   line-height: 20px;
 `);
 
+export const submit = css`
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px;
+  width: 80px;
+`;
+
+export const reset = css`
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 10px;
+  padding: 8px;
+`;
+
 // Comment
 export const CommentWrapper = withTheme(styled.div`
   border-bottom: 1px solid ${p => p.theme.colors.detail};

@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "emotion": "^7.0.13",
+    "found": "^0.3.3",
     "react": "16.0.0-beta.5",
     "theming": "^1.1.0"
   },
