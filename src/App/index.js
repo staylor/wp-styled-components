@@ -30,4 +30,4 @@ export const Secondary = styled.section`
   }
 `;
 
-export const ThemeProvider = React.createElement(ThemingProvider, { theme });
+export const ThemeProvider = () => React.createElement(ThemingProvider, { theme });
