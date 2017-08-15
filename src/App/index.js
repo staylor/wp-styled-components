@@ -4,9 +4,9 @@ import styled from 'emotion/react';
 import { ThemeProvider, withTheme } from 'theming';
 import theme from '../theme';
 import responsive from '../responsive';
+import '../global';
 import Header from '../Header';
 import Sidebar from '../Sidebar';
-import '../global';
 
 export { Header, Sidebar };
 
