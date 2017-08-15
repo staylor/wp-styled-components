@@ -1,7 +1,8 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'emotion/react';
 import { withTheme } from 'theming';
 
-// eslint-disable-next-line
 export const LoadMore = withTheme(styled.button`
   appearance: none;
   background: ${p => p.theme.colors.white};
@@ -25,3 +26,32 @@ export const LoadMore = withTheme(styled.button`
     outline: 0 none;
   }
 `);
+
+const Archive = ({ edges, component: Post, canLoadMore = false, loadMore }) => [
+  <ul key={'ul'}>
+    {edges.map(({ cursor, node }) =>
+      <li key={cursor}>
+        <Post post={node} />
+      </li>
+    )}
+  </ul>,
+  canLoadMore &&
+    <LoadMore key={'button'} onClick={loadMore}>
+      MORE
+    </LoadMore>,
+];
+
+Archive.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  component: PropTypes.any,
+  canLoadMore: PropTypes.bool,
+  loadMore: PropTypes.func,
+  edges: PropTypes.arrayOf(
+    PropTypes.shape({
+      node: PropTypes.object,
+      cursor: PropTypes.string,
+    })
+  ).isRequired,
+};
+
+export default Archive;
