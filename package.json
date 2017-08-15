@@ -5,6 +5,10 @@
   "main": "lib/index.js",
   "author": "Scott Taylor",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/staylor/wp-styled-components"
+  },
   "dependencies": {
     "emotion": "^7.0.13",
     "found": "^0.3.3",
