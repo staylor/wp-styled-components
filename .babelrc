@@ -1,8 +1,7 @@
 {
   "presets": [
-    "env",
-    "stage-0",
-    "react"
+    "babel-preset-kyt-react",
+    "stage-0"
   ],
   "plugins": [
     "emotion/babel"

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'emotion/react';
-import { ThemeProvider as ThemingProvider, withTheme } from 'theming';
+import { ThemeProvider, withTheme } from 'theming';
 import theme from '../theme';
 import responsive from '../responsive';
 
@@ -30,5 +30,7 @@ export const Secondary = styled.section`
   }
 `;
 
-export const ThemeProvider = ({ children }) =>
-  React.createElement(ThemingProvider, { theme }, children);
+export const Provider = ({ children }) =>
+  <ThemeProvider theme={theme}>
+    {children}
+  </ThemeProvider>;

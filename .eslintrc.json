@@ -1,14 +1,12 @@
 {
   "extends": [
-    "airbnb-base",
-    "prettier"
+    "airbnb",
+    "prettier",
+    "prettier/react"
   ],
   "plugins": [
-    "prettier",
-    "react",
-    "import"
+    "prettier"
   ],
-  "settings": {},
   "rules": {
     "prettier/prettier": ["error", {
       "trailingComma": "es5",
@@ -16,6 +14,5 @@
       "singleQuote": true,
       "printWidth": 90
     }]
-  },
-  "env": {}
+  }
 }
