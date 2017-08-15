@@ -3,6 +3,7 @@
     "babel-preset-kyt-react"
   ],
   "plugins": [
-    "emotion/babel"
+    "emotion/babel",
+    "babel-plugin-transform-class-properties"
   ]
 }
