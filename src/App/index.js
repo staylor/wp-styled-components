@@ -1,8 +1,18 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'emotion/react';
-import { ThemeProvider, withTheme } from 'theming';
+import { ThemeProvider as ThemingProvider, withTheme } from 'theming';
+import theme from '../theme';
 import responsive from '../responsive';
 
-export { ThemeProvider };
+export const ThemeProvider = ({ children }) =>
+  <ThemingProvider theme={theme}>
+    {children}
+  </ThemingProvider>;
+
+ThemeProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export const PageWrapper = withTheme(styled.div`
   background: ${p => p.theme.colors.white};

@@ -1,19 +1,9 @@
 {
-  "parser": "babel-eslint",
   "extends": [
-    "airbnb",
-    "prettier",
-    "prettier/react"
-  ],
-  "plugins": [
-    "prettier"
+    "eslint-config-kyt"
   ],
   "rules": {
-    "prettier/prettier": ["error", {
-      "trailingComma": "es5",
-      "semi": true,
-      "singleQuote": true,
-      "printWidth": 90
-    }]
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }]
   }
 }
