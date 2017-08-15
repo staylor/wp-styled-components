@@ -2,7 +2,7 @@ import styled from 'emotion/react';
 import { ThemeProvider, withTheme } from 'theming';
 import responsive from '../responsive';
 
-export default ThemeProvider;
+export { ThemeProvider };
 
 export const PageWrapper = withTheme(styled.div`
   background: ${p => p.theme.colors.white};
