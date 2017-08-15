@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'emotion/react';
 import { withTheme } from 'theming';
 
@@ -8,8 +9,16 @@ export const Container = withTheme(styled.div`
 `);
 
 export const ActivityIndicator = withTheme(styled.div`
-  background: ${p => p.theme.colors.white}
-    url('/images/icons/icon-activity-indicator.gif') no-repeat 50% 10px;
+  background: ${p => p.theme.colors.white} url('/images/icons/icon-activity-indicator.gif')
+    no-repeat 50% 10px;
   height: 56px;
   width: 100%;
 `);
+
+export default function Loading() {
+  return (
+    <Container>
+      <ActivityIndicator />
+    </Container>
+  );
+}
