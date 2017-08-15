@@ -1,6 +1,7 @@
 import { css, injectGlobal } from 'emotion';
-import theme from 'styles/theme';
+import theme from './theme';
 
+// eslint-disable-next-line
 export const clear = css`
   &::after {
     clear: both;
@@ -11,6 +12,7 @@ export const clear = css`
   }
 `;
 
+// eslint-disable-next-line
 injectGlobal`
   body {
     background: ${theme.colors.background};
