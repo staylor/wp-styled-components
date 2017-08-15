@@ -4,6 +4,8 @@ import { ThemeProvider, withTheme } from 'theming';
 import theme from '../theme';
 import responsive from '../responsive';
 
+export { ThemeProvider };
+
 export const PageWrapper = withTheme(styled.div`
   background: ${p => p.theme.colors.white};
   margin: 0 auto;
@@ -29,8 +31,3 @@ export const Secondary = styled.section`
     flex: 1;
   }
 `;
-
-export const Provider = ({ children }) =>
-  <ThemeProvider theme={theme}>
-    {children}
-  </ThemeProvider>;
