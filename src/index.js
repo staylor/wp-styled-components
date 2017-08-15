@@ -1,7 +1,9 @@
-import { css } from 'emotion';
+import { css, hydrate } from 'emotion';
 import styled from 'emotion/react';
 import { withTheme } from 'theming';
 import theme from './theme';
+
+export { hydrate };
 
 export const ContentWrapper = styled.div`max-width: 740px;`;
 export const ArticleWrapper = styled.article`max-width: 740px;`;
