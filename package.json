@@ -1,6 +1,6 @@
 {
   "name": "wp-styled-components",
-  "version": "0.0.32",
+  "version": "0.0.33",
   "description": "Styled Components for GraphQL-powered WordPress",
   "main": "lib/index.js",
   "author": "Scott Taylor",
