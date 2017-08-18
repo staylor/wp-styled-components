@@ -56,17 +56,6 @@ export const Level = withTheme(styled.ul`
       top: ${p => p.theme.padding * 2}px;
     }
 
-    a {
-      font-size: 13px;
-      line-height: 20px;
-      background: ${p => p.theme.colors.subnav.background};
-      border-bottom: 1px dotted ${p => p.theme.colors.subnav.detail};
-      color: ${p => p.theme.colors.dark};
-      height: auto;
-      padding: ${p => p.theme.padding / 2}px ${p => p.theme.padding}px;
-      width: 168px;
-    }
-
     & ul {
       left: 100%;
       top: 0;
@@ -75,6 +64,18 @@ export const Level = withTheme(styled.ul`
 `);
 
 export const NavItem = styled.li`display: inline-block;`;
+
+export const SubNavItem = withTheme(styled(Link)`
+  background: ${p => p.theme.colors.subnav.background};
+  border-bottom: 1px dotted ${p => p.theme.colors.subnav.detail};
+  color: ${p => p.theme.colors.dark};
+  display: block;
+  font-size: 13px;
+  height: auto;
+  line-height: 20px;
+  padding: ${p => p.theme.padding / 2}px ${p => p.theme.padding}px;
+  width: 168px;
+`);
 
 type NavMenuItem = {
   id: string,
@@ -101,9 +102,8 @@ export default class NavMenu extends Component {
   props: NavMenuProps;
 
   sorted = null;
-  level = 0;
 
-  parseItem({ id, title, url: itemUrl, typeSlug, dataSlug }) {
+  parseItem = ({ id, parent, title, url: itemUrl, typeSlug, dataSlug }) => {
     let path;
     if (typeSlug && dataSlug) {
       path = `/${typeSlug}/${dataSlug}`;
@@ -116,28 +116,24 @@ export default class NavMenu extends Component {
       }
     }
 
-    if (this.sorted[id]) {
-      this.level += 1;
-    }
     return (
       <NavItem key={id}>
-        <Link to={path}>
-          {title}
-        </Link>
+        {parent
+          ? <SubNavItem to={path}>
+              {title}
+            </SubNavItem>
+          : <Link to={path}>
+              {title}
+            </Link>}
         {this.sorted[id] ? this.walk(this.sorted[id]) : null}
       </NavItem>
     );
-  }
+  };
 
   walk(node) {
     return (
       <Level>
-        {node.map(child => {
-          if (!child.parent) {
-            this.level = 0;
-          }
-          return this.parseItem(child);
-        })}
+        {node.map(this.parseItem)}
       </Level>
     );
   }

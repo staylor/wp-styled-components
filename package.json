@@ -40,6 +40,7 @@
   "scripts": {
     "clean": "rimraf lib",
     "build": "npm run clean && babel --ignore __tests__,__mocks__ src -d lib",
+    "watch": "npm run clean && babel -w --ignore __tests__,__mocks__ src -d lib",
     "prettier": "prettier-eslint \"src/**/*.js\"",
     "prepare": "npm run build"
   }
