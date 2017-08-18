@@ -1,4 +1,4 @@
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import { withTheme } from 'theming';
 
 export const Article = withTheme(styled.article`margin: 0 0 ${p => p.theme.padding}px;`);

@@ -1,6 +1,6 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import { withTheme } from 'theming';
 
 export const LoadMore = withTheme(styled.button`
@@ -27,7 +27,19 @@ export const LoadMore = withTheme(styled.button`
   }
 `);
 
-const Archive = ({ edges, component: Post, canLoadMore = false, loadMore }) => [
+type Edge = {
+  node: Object,
+  cursor: string,
+};
+
+type ArchiveProps = {
+  edges: Array<Edge>,
+  component: any,
+  canLoadMore: boolean,
+  loadMore: () => void,
+};
+
+const Archive = ({ edges, component: Post, canLoadMore = false, loadMore }: ArchiveProps) => [
   <ul key={'ul'}>
     {edges.map(({ cursor, node }) =>
       <li key={cursor}>
@@ -40,18 +52,5 @@ const Archive = ({ edges, component: Post, canLoadMore = false, loadMore }) => [
       MORE
     </LoadMore>,
 ];
-
-Archive.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  component: PropTypes.any,
-  canLoadMore: PropTypes.bool,
-  loadMore: PropTypes.func,
-  edges: PropTypes.arrayOf(
-    PropTypes.shape({
-      node: PropTypes.object,
-      cursor: PropTypes.string,
-    })
-  ).isRequired,
-};
 
 export default Archive;

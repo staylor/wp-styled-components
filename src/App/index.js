@@ -1,6 +1,6 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import { ThemeProvider, withTheme } from 'theming';
 import theme from '../theme';
 import responsive from '../responsive';
@@ -48,7 +48,14 @@ export const Footer = () =>
     React / GraphQL / WordPress / Emotion
   </StyledFooter>;
 
-export default function App({ settings, navMenu, sidebar, children }) {
+type AppProps = {
+  settings: Object,
+  navMenu: Object,
+  sidebar: Object,
+  children: any,
+};
+
+export default function App({ settings, navMenu, sidebar, children }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <PageWrapper>
@@ -66,11 +73,3 @@ export default function App({ settings, navMenu, sidebar, children }) {
     </ThemeProvider>
   );
 }
-
-App.propTypes = {
-  /* eslint-disable react/forbid-prop-types */
-  settings: PropTypes.object.isRequired,
-  navMenu: PropTypes.object.isRequired,
-  sidebar: PropTypes.object.isRequired,
-  children: PropTypes.node.isRequired,
-};

@@ -1,7 +1,6 @@
 import url from 'url';
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import { withTheme } from 'theming';
 import { Link } from 'found';
 import responsive from '../responsive';
@@ -77,27 +76,29 @@ export const Level = withTheme(styled.ul`
 
 export const NavItem = styled.li`display: inline-block;`;
 
+type NavMenuItem = {
+  id: string,
+  title: string,
+  url: string,
+  parent: string,
+  order: number,
+  type: string,
+  typeName: string,
+  typeSlug: string,
+  dataSlug: string,
+  dataID: string,
+};
+
+type NavMenuProps = {
+  navMenu: {
+    id: string,
+    name: string,
+    items: Array<NavMenuItem>,
+  },
+};
+
 export default class NavMenu extends Component {
-  static propTypes = {
-    navMenu: PropTypes.shape({
-      id: PropTypes.string,
-      name: PropTypes.string,
-      items: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string,
-          title: PropTypes.string,
-          url: PropTypes.string,
-          parent: PropTypes.string,
-          order: PropTypes.number,
-          type: PropTypes.string,
-          typeName: PropTypes.string,
-          typeSlug: PropTypes.string,
-          dataSlug: PropTypes.string,
-          dataID: PropTypes.string,
-        })
-      ),
-    }).isRequired,
-  };
+  props: NavMenuProps;
 
   sorted = null;
   level = 0;

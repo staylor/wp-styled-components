@@ -1,6 +1,6 @@
+// @flow
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 
 const ResponsiveImage = styled.img`
   display: block;
@@ -9,20 +9,24 @@ const ResponsiveImage = styled.img`
   max-width: 100%;
 `;
 
+type ImageProps = {
+  crop: string,
+  image: {
+    sourceUrl: string,
+    mediaDetails: {
+      sizes: Array<Object>,
+    },
+  },
+};
+
 class Image extends Component {
-  static propTypes = {
-    crop: PropTypes.string,
-    image: PropTypes.shape({
-      sourceUrl: PropTypes.String,
-      mediaDetails: PropTypes.object,
-    }).isRequired,
-  };
+  props: ImageProps;
 
   static defaultProps = {
     crop: 'large',
   };
 
-  getCrop(sizes) {
+  getCrop(sizes: Array<Object>) {
     let chosen;
     const choices = [this.props.crop, this.constructor.defaultProps.crop, 'full'];
 
@@ -40,7 +44,7 @@ class Image extends Component {
     const { sourceUrl, mediaDetails: { sizes } } = this.props.image;
 
     if (!sourceUrl) {
-      return '';
+      return null;
     }
 
     const chosen = this.getCrop(sizes);

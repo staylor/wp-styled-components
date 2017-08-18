@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'found';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import { withTheme } from 'theming';
 import responsive from '../responsive';
 import NavMenu from '../NavMenu';
@@ -52,7 +51,15 @@ export const Description = withTheme(styled.h2`
   }
 `);
 
-const Header = ({ settings, navMenu }) =>
+type HeaderProps = {
+  settings: {
+    title: string,
+    description: string,
+  },
+  navMenu: Object,
+};
+
+const Header = ({ settings, navMenu }: HeaderProps) =>
   <Masthead role="banner">
     <Title>
       <Link to="/">
@@ -64,14 +71,5 @@ const Header = ({ settings, navMenu }) =>
     </Description>
     <NavMenu navMenu={navMenu} />
   </Masthead>;
-
-Header.propTypes = {
-  settings: PropTypes.shape({
-    title: PropTypes.string,
-    description: PropTypes.string,
-  }).isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  navMenu: PropTypes.object.isRequired,
-};
 
 export default Header;

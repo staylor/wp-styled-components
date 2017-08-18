@@ -1,4 +1,17 @@
-export function sortHierarchy(list) {
+// @flow
+
+type HierarchyItem = {
+  node: {
+    parent: string,
+  },
+};
+
+type OrderedItem = {
+  parent: string,
+  order: number,
+};
+
+export function sortHierarchy(list: Array<HierarchyItem>) {
   const nested = {
     top: [],
   };
@@ -17,7 +30,7 @@ export function sortHierarchy(list) {
   return nested;
 }
 
-export function sortOrderedHierarchy(items) {
+export function sortOrderedHierarchy(items: Array<OrderedItem>) {
   const nested = {
     top: [],
   };

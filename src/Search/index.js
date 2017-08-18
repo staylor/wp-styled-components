@@ -1,4 +1,4 @@
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import { withTheme } from 'theming';
 
 export const SearchBox = styled.section`margin-bottom: 40px;`;
