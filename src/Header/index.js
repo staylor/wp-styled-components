@@ -59,17 +59,14 @@ type HeaderProps = {
   navMenu: Object,
 };
 
-const Header = ({ settings, navMenu }: HeaderProps) =>
+const Header = ({ settings, navMenu }: HeaderProps) => (
   <Masthead role="banner">
     <Title>
-      <Link to="/">
-        {settings.title}
-      </Link>
+      <Link to="/">{settings.title}</Link>
     </Title>
-    <Description>
-      {settings.description}
-    </Description>
+    <Description>{settings.description}</Description>
     <NavMenu navMenu={navMenu} />
-  </Masthead>;
+  </Masthead>
+);
 
 export default Header;

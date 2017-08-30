@@ -118,24 +118,14 @@ export default class NavMenu extends Component {
 
     return (
       <NavItem key={id}>
-        {parent
-          ? <SubNavItem to={path}>
-              {title}
-            </SubNavItem>
-          : <Link to={path}>
-              {title}
-            </Link>}
+        {parent ? <SubNavItem to={path}>{title}</SubNavItem> : <Link to={path}>{title}</Link>}
         {this.sorted[id] ? this.walk(this.sorted[id]) : null}
       </NavItem>
     );
   };
 
   walk(node) {
-    return (
-      <Level>
-        {node.map(this.parseItem)}
-      </Level>
-    );
+    return <Level>{node.map(this.parseItem)}</Level>;
   }
 
   render() {
@@ -148,10 +138,6 @@ export default class NavMenu extends Component {
     this.sorted = sortOrderedHierarchy(navMenu.items);
     const navMenuHtml = this.walk(this.sorted.top);
 
-    return (
-      <NavWrapper>
-        {navMenuHtml}
-      </NavWrapper>
-    );
+    return <NavWrapper>{navMenuHtml}</NavWrapper>;
   }
 }

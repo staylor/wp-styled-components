@@ -5,7 +5,7 @@ import theme from './theme';
 export const clear = css`
   &::after {
     clear: both;
-    content: ".";
+    content: '.';
     display: block;
     height: 0;
     visibility: hidden;

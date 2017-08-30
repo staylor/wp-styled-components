@@ -97,7 +97,7 @@ export const embed = css`
   &::before {
     background: ${theme.colors.pink};
     border-radius: 10px;
-    content: " ";
+    content: ' ';
     height: 52px;
     left: 50%;
     margin: -21px 0 0 -48px;
@@ -112,7 +112,7 @@ export const embed = css`
     border-bottom: 10px solid transparent;
     border-left: 20px solid ${theme.colors.white};
     border-top: 10px solid transparent;
-    content: " ";
+    content: ' ';
     height: 0;
     left: calc(50% + 31px);
     margin: -21px 0 0 -48px;

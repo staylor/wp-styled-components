@@ -44,16 +44,17 @@ type SidebarProps = {
   },
 };
 
-const Sidebar = ({ sidebar }: SidebarProps) =>
+const Sidebar = ({ sidebar }: SidebarProps) => (
   <ul>
-    {sidebar.widgets.map(({ id, classname, content: { rendered: widget } }) =>
+    {sidebar.widgets.map(({ id, classname, content: { rendered: widget } }) => (
       <Widget
         key={id}
         dangerouslySetInnerHTML={{
           __html: transformStyles(classname, widget),
         }}
       />
-    )}
-  </ul>;
+    ))}
+  </ul>
+);
 
 export default Sidebar;

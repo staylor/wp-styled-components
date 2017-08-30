@@ -41,16 +41,17 @@ type ArchiveProps = {
 
 const Archive = ({ edges, component: Post, canLoadMore = false, loadMore }: ArchiveProps) => [
   <ul key={'ul'}>
-    {edges.map(({ cursor, node }) =>
+    {edges.map(({ cursor, node }) => (
       <li key={cursor}>
         <Post post={node} />
       </li>
-    )}
+    ))}
   </ul>,
-  canLoadMore &&
+  canLoadMore && (
     <LoadMore key={'button'} onClick={loadMore}>
       MORE
-    </LoadMore>,
+    </LoadMore>
+  ),
 ];
 
 export default Archive;

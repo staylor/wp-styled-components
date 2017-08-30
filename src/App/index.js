@@ -41,12 +41,13 @@ const StyledFooter = withTheme(styled.footer`
   text-align: center;
 `);
 
-export const Footer = () =>
+export const Footer = () => (
   <StyledFooter>
     © Scott Taylor ...&nbsp; Brooklyn, NY ...{' '}
     <a href="https://twitter.com/wonderboymusic">@wonderboymusic</a>&nbsp; ... Powered by GraphQL /
     React / GraphQL / WordPress / Emotion
-  </StyledFooter>;
+  </StyledFooter>
+);
 
 type AppProps = {
   settings: Object,
@@ -61,9 +62,7 @@ export default function App({ settings, navMenu, sidebar, children }: AppProps) 
       <PageWrapper>
         <Header {...{ settings, navMenu }} />
         <Content>
-          <Primary>
-            {children}
-          </Primary>
+          <Primary>{children}</Primary>
           <Secondary>
             <Sidebar sidebar={sidebar} />
           </Secondary>
