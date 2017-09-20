@@ -12,6 +12,7 @@ export const Container = withTheme(styled.div`
 
 const Wrap = styled.div`
   height: 40px;
+  margin: 0 auto;
   position: relative;
   width: 40px;
 `;
