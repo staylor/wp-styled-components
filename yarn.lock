@@ -1435,9 +1435,9 @@ eslint-config-kyt@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/eslint-config-kyt/-/eslint-config-kyt-0.4.0.tgz#6b327418d41d977544fbbc037f8f1f9130897576"
 
-eslint-config-prettier@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-2.4.0.tgz#fb7cf29c0ab2ba61af5164fb1930f9bef3be2872"
+eslint-config-prettier@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-2.5.0.tgz#9ecb9296bae4e2e59a3ce361a96c9f825fe67b75"
   dependencies:
     get-stdin "^5.0.1"
 
@@ -1488,12 +1488,12 @@ eslint-plugin-jsx-a11y@^6.0.2:
     emoji-regex "^6.1.0"
     jsx-ast-utils "^1.4.0"
 
-eslint-plugin-prettier@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-2.2.0.tgz#f2837ad063903d73c621e7188fb3d41486434088"
+eslint-plugin-prettier@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-2.3.1.tgz#e7a746c67e716f335274b88295a9ead9f544e44d"
   dependencies:
     fast-diff "^1.1.1"
-    jest-docblock "^20.0.1"
+    jest-docblock "^21.0.0"
 
 eslint-plugin-react@^7.3.0:
   version "7.3.0"
@@ -1557,19 +1557,19 @@ eslint@^4.5.0:
     table "^4.0.1"
     text-table "~0.2.0"
 
-eslint@^4.6.1:
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.6.1.tgz#ddc7fc7fd70bf93205b0b3449bb16a1e9e7d4950"
+eslint@^4.7.1:
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.7.1.tgz#849804136953ebe366782f9f8611e2cbd1b54681"
   dependencies:
     ajv "^5.2.0"
     babel-code-frame "^6.22.0"
     chalk "^2.1.0"
     concat-stream "^1.6.0"
     cross-spawn "^5.1.0"
-    debug "^2.6.8"
+    debug "^3.0.1"
     doctrine "^2.0.0"
     eslint-scope "^3.7.1"
-    espree "^3.5.0"
+    espree "^3.5.1"
     esquery "^1.0.0"
     estraverse "^4.2.0"
     esutils "^2.0.2"
@@ -1590,7 +1590,7 @@ eslint@^4.6.1:
     natural-compare "^1.4.0"
     optionator "^0.8.2"
     path-is-inside "^1.0.2"
-    pluralize "^4.0.0"
+    pluralize "^7.0.0"
     progress "^2.0.0"
     require-uncached "^1.0.3"
     semver "^5.3.0"
@@ -1602,6 +1602,13 @@ eslint@^4.6.1:
 espree@^3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/espree/-/espree-3.5.0.tgz#98358625bdd055861ea27e2867ea729faf463d8d"
+  dependencies:
+    acorn "^5.1.1"
+    acorn-jsx "^3.0.0"
+
+espree@^3.5.1:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/espree/-/espree-3.5.1.tgz#0c988b8ab46db53100a1954ae4ba995ddd27d87e"
   dependencies:
     acorn "^5.1.1"
     acorn-jsx "^3.0.0"
@@ -1768,9 +1775,9 @@ flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
 
-flow-bin@^0.54.1:
-  version "0.54.1"
-  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.54.1.tgz#7101bcccf006dc0652714a8aef0c72078a760510"
+flow-bin@^0.55.0:
+  version "0.55.0"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.55.0.tgz#9083da9327bd8cab6b4076d63d85f2247a7eae1b"
 
 for-in@^1.0.1:
   version "1.0.2"
@@ -2259,9 +2266,9 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-jest-docblock@^20.0.1:
-  version "20.0.3"
-  resolved "https://registry.yarnpkg.com/jest-docblock/-/jest-docblock-20.0.3.tgz#17bea984342cc33d83c50fbe1545ea0efaa44712"
+jest-docblock@^21.0.0:
+  version "21.1.0"
+  resolved "https://registry.yarnpkg.com/jest-docblock/-/jest-docblock-21.1.0.tgz#43154be2441fb91403e36bb35cb791a5017cea81"
 
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
@@ -2789,6 +2796,10 @@ pluralize@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-4.0.0.tgz#59b708c1c0190a2f692f1c7618c446b052fd1762"
 
+pluralize@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
+
 postcss-js@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/postcss-js/-/postcss-js-1.0.0.tgz#ccee5aa3b1970dd457008e79438165f66919ba30"
@@ -2854,9 +2865,25 @@ prettier-eslint-cli@^4.3.2:
     rxjs "^5.3.0"
     yargs "8.0.2"
 
-prettier-eslint@^8.0.0, prettier-eslint@^8.1.0:
+prettier-eslint@^8.0.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/prettier-eslint/-/prettier-eslint-8.1.0.tgz#8b0366e180c0d4ec1f76ccd635bb20e3f47bc156"
+  dependencies:
+    common-tags "^1.4.0"
+    dlv "^1.1.0"
+    eslint "^4.5.0"
+    indent-string "^3.2.0"
+    lodash.merge "^4.6.0"
+    loglevel-colored-level-prefix "^1.0.0"
+    prettier "^1.7.0"
+    pretty-format "^20.0.3"
+    require-relative "^0.8.7"
+    typescript "^2.4.2"
+    typescript-eslint-parser "^7.0.0"
+
+prettier-eslint@^8.1.1:
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/prettier-eslint/-/prettier-eslint-8.1.1.tgz#826d71d79389c93d59edd56e3f0d58264a6ce36f"
   dependencies:
     common-tags "^1.4.0"
     dlv "^1.1.0"
