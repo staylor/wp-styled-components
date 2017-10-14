@@ -1,47 +1,11 @@
 {
   "name": "wp-styled-components",
   "version": "0.0.33",
-  "description": "Styled Components for GraphQL-powered WordPress",
-  "main": "lib/index.js",
+  "description": "DEPRECATED: This project is no longer maintained.",
   "author": "Scott Taylor",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/staylor/wp-styled-components"
   },
-  "dependencies": {
-    "emotion": "7.1.0",
-    "found": "^0.3.3",
-    "react": "16.0.0-beta.5",
-    "theming": "^1.1.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^7.2.3",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-flow": "^6.23.0",
-    "babel-preset-kyt-react": "^0.2.0",
-    "eslint": "^4.4.1",
-    "eslint-config-airbnb": "^15.1.0",
-    "eslint-config-kyt": "^0.4.0",
-    "eslint-config-prettier": "^2.3.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-json": "^1.2.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-prettier": "^2.2.0",
-    "eslint-plugin-react": "^7.2.1",
-    "flow-bin": "^0.53.1",
-    "prettier": "^1.5.3",
-    "prettier-eslint": "^6.4.2",
-    "prettier-eslint-cli": "^4.2.0",
-    "rimraf": "^2.6.1"
-  },
-  "scripts": {
-    "clean": "rimraf lib",
-    "build": "npm run clean && babel --ignore __tests__,__mocks__ src -d lib",
-    "watch": "npm run clean && babel -w --ignore __tests__,__mocks__ src -d lib",
-    "prettier": "prettier-eslint \"src/**/*.js\"",
-    "prepare": "npm run build"
-  }
 }
